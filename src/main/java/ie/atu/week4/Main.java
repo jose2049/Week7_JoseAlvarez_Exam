@@ -48,6 +48,7 @@ public class Main {
                     break;
             case 3:
                 //call function to display all data
+                String toString;
                 break;
             case 4:
                 System.out.print("You have exited the program\n");
