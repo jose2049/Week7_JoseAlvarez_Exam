@@ -21,8 +21,10 @@ public class Main {
                 System.out.print("Enter the number of customers : ");
                 int n=input.nextInt();
                 int i = 0;
-                CustomerClass c=new CustomerClass();
+
                 while(i < n){
+
+                    CustomerClass c =new CustomerClass(n);
 
                     System.out.print("Enter Customer Id : ");
                     c.setCustomerID(new Scanner(System.in).nextLine());
@@ -43,6 +45,23 @@ public class Main {
                             System.out.print("Enter the update field (name, email, phone, id) : ");
                             String update=input.nextLine();
                             //to be continued
+                            switch(update){
+                                case "name":
+                                    System.out.print("Enter New Customer Name : ");
+                                    cc.setName(new Scanner(System.in).nextLine());
+                                    break;
+                                case "email":
+                                    System.out.print("Enter New Customer Email : ");
+                                    cc.setEmail(new Scanner(System.in).nextLine());
+                                    break;
+                                case "phone":
+                                    System.out.print("Enter New Customer Phone Number : ");
+                                    cc.setPhoneNumber((new Scanner(System.in).nextLine()));
+                                    break;
+                                case "id":
+                                    System.out.print("Enter New Customer Id : ");
+                                    cc.setCustomerID(new Scanner(System.in).nextLine());
+                            }
                         }
                     }
                     break;
